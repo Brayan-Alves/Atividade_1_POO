@@ -1,32 +1,31 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class Usuario {
     private String nome;
-    private String email;
-    private String senha;
+    private List<Perfil> perfis;
     
-    public Usuario() {
+    public Usuario(String nome) {
+        this.nome = nome;
+        this.perfis = new LinkedList<>();
     }
 
+    public List<Perfil> getPerfis() {
+        return perfis;
+    }
+    public void setPerfis(List<Perfil> perfis) {
+        this.perfis = perfis;
+    }
+    public void ligarPerfil(Perfil perfil){
+        this.perfis.add(perfil);
+    }
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void adicionarPerfil(Perfil p){
+        this.perfis.add(p);
     }
 }
