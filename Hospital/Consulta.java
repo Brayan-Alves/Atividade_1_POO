@@ -4,8 +4,9 @@ public class Consulta {
     private Medico medicoResponsavel;
     private Prontuario prontuario;
 
-    public Consulta(Medico medicoResponsavel) {
+    public Consulta(Medico medicoResponsavel, String descricaoProntuario) {
         this.medicoResponsavel = medicoResponsavel;
+        this.prontuario = new Prontuario(descricaoProntuario);
     }
     
     public Medico getMedicoResponsavel() {

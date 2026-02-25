@@ -8,9 +8,9 @@ public class Pedido {
     private NotaFiscal notaFiscal;
     private Cliente cliente;
     
-    public Pedido(NotaFiscal notaFiscal, Cliente cliente) {
+    public Pedido(Cliente cliente, String idNota) {
         this.produtos = new LinkedList<Produto>();
-        this.notaFiscal = notaFiscal;
+        this.notaFiscal = new NotaFiscal(idNota);
         this.cliente = cliente;
     }
 

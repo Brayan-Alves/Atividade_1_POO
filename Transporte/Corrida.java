@@ -7,11 +7,12 @@ public class Corrida {
     private String destino;
     private Pagamento pagamento;
     
-    public Corrida(Motorista motorista, Passageiro passageiro, String origem, String destino) {
+    public Corrida(Motorista motorista, Passageiro passageiro, String origem, String destino, int preco) {
         this.motorista = motorista;
         this.passageiro = passageiro;
         this.origem = origem;
         this.destino = destino;
+        this.pagamento = new Pagamento(false, preco);
     }
     public Motorista getMotorista() {
         return motorista;
